@@ -18,9 +18,7 @@ struct VehiclesView: View {
             List {
                 ForEach(vehicles, id: \.id) { vehicle in
                     NavigationLink(destination: VehicleView(vehicle: vehicle, model: model)) {
-                        VStack {
-                            VehiclesRow(vehicle: vehicle, model: $model)
-                        }
+                        VehiclesRow(vehicle: vehicle, model: $model)
                     }
                 }
             }
