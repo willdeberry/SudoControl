@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct BatteryProgress: View {
-    var vehicle: Vehicle
-    @State private var chargeState: ChargeStateResponse? = nil
+    @Binding var chargeState: ChargeStateResponse?
 
     var body: some View {
         ZStack {
@@ -36,16 +35,6 @@ struct BatteryProgress: View {
                     Text("\(String(format: "%.2f", $0.batteryRange)) mi")
                         .font(.caption)
                 })
-            }
-        }
-        .onAppear(perform: getChargeData)
-    }
-
-    private func getChargeData() {
-        let api = Api(vehicle: vehicle)
-        api.getChargeState() { chargeState in
-            if let chargeState = chargeState {
-                self.chargeState = chargeState
             }
         }
     }

@@ -24,7 +24,7 @@ struct VehicleView: View {
                         .font(.caption)
                 }
                 Spacer()
-                BatteryProgress(vehicle: vehicle)
+                BatteryProgress(chargeState: $chargeState)
                     .frame(width: 130.0, height: 130.0)
                     .padding([.leading, .trailing, .bottom], 30)
                 Spacer()
@@ -32,22 +32,19 @@ struct VehicleView: View {
 
             Divider()
 
-            VStack {
-                Spacer()
-                HStack {
-                    Button(action: {}){Text("Button")}
-                    Button(action: {}){Text("Button")}
-                    Button(action: {}){Text("Button")}
-                }
-                HStack {
-                    Button(action: {}){Text("Button")}
-                    Button(action: {}){Text("Button")}
-                    Button(action: {}){Text("Button")}
-                }
-                Spacer()
-            }
+            ActionsView(chargeState: $chargeState)
 
             Spacer()
+        }
+        .onAppear(perform: getChargeData)
+    }
+
+    private func getChargeData() {
+        let api = Api(vehicle: vehicle)
+        api.getChargeState() { chargeState in
+            if let chargeState = chargeState {
+                self.chargeState = chargeState
+            }
         }
     }
 }
