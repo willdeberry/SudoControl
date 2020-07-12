@@ -23,27 +23,20 @@ struct VehicleView: View {
         NavigationView {
             VStack {
                 HStack {
-                    Spacer()
-                    VStack {
-                        Text(model)
-                            .font(.largeTitle)
-                            .bold()
-                        Text(vehicle.vin)
-                            .font(.caption)
-                    }
+                    DetailsView(vehicle: vehicle, model: model)
+                        .padding([.leading, .bottom], 30)
+                        .padding([.trailing], 15)
                     Spacer()
                     BatteryProgress(chargeState: $chargeState)
-                        .frame(width: 130.0, height: 130.0)
-                        .padding([.leading, .trailing, .bottom], 30)
+                        .frame(width: 125.0, height: 125.0)
+                        .padding([.trailing, .bottom], 30)
+                        .padding([.leading], 15)
                         .shadow(radius: 10.0, x: 10, y: 10)
-                    Spacer()
                 }
 
                 Divider()
 
                 ActionsView(chargeState: $chargeState)
-
-                Spacer()
             }
         }
         .navigationTitle(model)

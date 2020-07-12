@@ -32,6 +32,8 @@
 		B5FC2C5224BA2D3500AE44F6 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5124BA2D3500AE44F6 /* ChargeState.swift */; };
 		B5FC2C5424BA392200AE44F6 /* BatteryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5324BA392200AE44F6 /* BatteryProgress.swift */; };
 		B5FC2C5624BA61D700AE44F6 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5524BA61D700AE44F6 /* ActionsView.swift */; };
+		B5FC2C5824BA964000AE44F6 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5724BA964000AE44F6 /* DetailsView.swift */; };
+		B5FC2C5A24BA96F000AE44F6 /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5924BA96F000AE44F6 /* VehicleState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		B5FC2C5124BA2D3500AE44F6 /* ChargeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeState.swift; sourceTree = "<group>"; };
 		B5FC2C5324BA392200AE44F6 /* BatteryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryProgress.swift; sourceTree = "<group>"; };
 		B5FC2C5524BA61D700AE44F6 /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
+		B5FC2C5724BA964000AE44F6 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		B5FC2C5924BA96F000AE44F6 /* VehicleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 			children = (
 				B5FC2C4D24B810B200AE44F6 /* VehicleConfigData.swift */,
 				B5FC2C5124BA2D3500AE44F6 /* ChargeState.swift */,
+				B5FC2C5924BA96F000AE44F6 /* VehicleState.swift */,
 			);
 			path = ReturnData;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				B52332BB24B54DF000C9E403 /* VehicleView.swift */,
 				B5FC2C5324BA392200AE44F6 /* BatteryProgress.swift */,
 				B5FC2C5524BA61D700AE44F6 /* ActionsView.swift */,
+				B5FC2C5724BA964000AE44F6 /* DetailsView.swift */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5FC2C5424BA392200AE44F6 /* BatteryProgress.swift in Sources */,
+				B5FC2C5824BA964000AE44F6 /* DetailsView.swift in Sources */,
 				B52332AA24B3F1F100C9E403 /* Login.swift in Sources */,
 				B52332B424B41EA100C9E403 /* AuthData.swift in Sources */,
 				B5650E4B24B7B7560060A7FC /* AuthModel.swift in Sources */,
@@ -396,6 +403,7 @@
 				B5FC2C5624BA61D700AE44F6 /* ActionsView.swift in Sources */,
 				B5FC2C5224BA2D3500AE44F6 /* ChargeState.swift in Sources */,
 				B5FC2C4C24B8052800AE44F6 /* VehiclesRow.swift in Sources */,
+				B5FC2C5A24BA96F000AE44F6 /* VehicleState.swift in Sources */,
 				B523327E24B2C86700C9E403 /* ControlApp.swift in Sources */,
 				B5FC2C4E24B810B200AE44F6 /* VehicleConfigData.swift in Sources */,
 				B52332B224B417AB00C9E403 /* VehiclesView.swift in Sources */,

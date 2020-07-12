@@ -43,4 +43,22 @@ extension Api {
             }
         }
     }
+
+    func getVehicleState(completion: @escaping (VehicleStateResponse?) -> Void) {
+        guard let id = vehicle?.idS else { return }
+        sendCommand(method: "GET", api: "/vehicles/\(id)/data_request/vehicle_state", payload: nil) { result in
+            switch result {
+            case .success(let data):
+                guard let vehicleState = try? newJSONDecoder().decode(VehicleState.self, from: data) else {
+                    NSLog("Failed to decode vehicleState")
+                    completion(nil)
+                    return
+                }
+                completion(vehicleState.response)
+            case .failure(let error):
+                NSLog("Failed to get vehicle staet, Error \(error.localizedDescription)")
+                completion(nil)
+            }
+        }
+    }
 }
