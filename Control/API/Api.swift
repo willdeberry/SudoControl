@@ -69,9 +69,9 @@ class Api {
                 switch error {
                 case .wake:
                     // TODO: Send wake command
-                    if self.vehicle != nil, let id = self.vehicle?.idS {
-                        self.sendWake(id: id) { success in
-                            print("not sure what to do")
+                    if self.vehicle != nil {
+                        self.sendWake() { success in
+                            self.sendCommand(method: method, api: api, payload: payload, completion: completion)
                         }
                     }
                 default:

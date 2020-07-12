@@ -8,7 +8,8 @@
 import Foundation
 
 extension Api {
-    func sendWake(id: String, completion: @escaping (Bool) -> Void) {
+    func sendWake(completion: @escaping (Bool) -> Void) {
+        guard let id = vehicle?.idS else { return }
         sendCommand(method: "POST", api: "/vehicles/\(id)/wake_up", payload: nil) { result in
             switch result {
             case .success:
