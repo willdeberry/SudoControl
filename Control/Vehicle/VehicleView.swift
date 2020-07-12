@@ -10,37 +10,47 @@ import SwiftUI
 struct VehicleView: View {
     var vehicle: Vehicle
     var model: String
+    let api: Api
     @State private var chargeState: ChargeStateResponse? = nil
 
+    init(vehicle: Vehicle, model: String) {
+        self.vehicle = vehicle
+        self.model = model
+        self.api = Api(vehicle: vehicle)
+    }
+
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                VStack {
-                    Text(model)
-                        .font(.largeTitle)
-                        .bold()
-                    Text(vehicle.vin)
-                        .font(.caption)
+        NavigationView {
+            VStack {
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text(model)
+                            .font(.largeTitle)
+                            .bold()
+                        Text(vehicle.vin)
+                            .font(.caption)
+                    }
+                    Spacer()
+                    BatteryProgress(chargeState: $chargeState)
+                        .frame(width: 130.0, height: 130.0)
+                        .padding([.leading, .trailing, .bottom], 30)
+                        .shadow(radius: 10.0, x: 10, y: 10)
+                    Spacer()
                 }
-                Spacer()
-                BatteryProgress(chargeState: $chargeState)
-                    .frame(width: 130.0, height: 130.0)
-                    .padding([.leading, .trailing, .bottom], 30)
+
+                Divider()
+
+                ActionsView(chargeState: $chargeState)
+
                 Spacer()
             }
-
-            Divider()
-
-            ActionsView(chargeState: $chargeState)
-
-            Spacer()
         }
+        .navigationTitle(model)
         .onAppear(perform: getChargeData)
     }
 
     private func getChargeData() {
-        let api = Api(vehicle: vehicle)
         api.getChargeState() { chargeState in
             if let chargeState = chargeState {
                 self.chargeState = chargeState
