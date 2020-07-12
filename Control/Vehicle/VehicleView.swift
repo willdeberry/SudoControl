@@ -26,7 +26,7 @@ struct VehicleView: View {
                     DetailsView(vehicle: vehicle, model: model)
                         .padding([.leading, .bottom], 30)
                         .padding([.trailing], 15)
-                    Spacer()
+
                     BatteryProgress(chargeState: $chargeState)
                         .frame(width: 125.0, height: 125.0)
                         .padding([.trailing, .bottom], 30)
@@ -37,6 +37,7 @@ struct VehicleView: View {
                 Divider()
 
                 ActionsView(chargeState: $chargeState)
+                Spacer()
             }
         }
         .navigationTitle(model)
