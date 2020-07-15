@@ -10,13 +10,17 @@ import SwiftUI
 struct VehicleView: View {
     var vehicle: Vehicle
     var model: String
-    let api: Api
     @State private var chargeState: ChargeStateResponse? = nil
+    let api: Api
 
-    init(vehicle: Vehicle, model: String) {
+    init(vehicle: Vehicle, model: String, chargeState: ChargeStateResponse?) {
         self.vehicle = vehicle
         self.model = model
         self.api = Api(vehicle: vehicle)
+
+        if let chargeState = chargeState {
+            self.chargeState = chargeState
+        }
     }
 
     var body: some View {
@@ -53,8 +57,8 @@ struct VehicleView: View {
     }
 }
 
-//struct VehiclesItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        VehicleView()
-//    }
-//}
+struct VehiclesItem_Previews: PreviewProvider {
+    static var previews: some View {
+        VehicleView(vehicle: vehicle1, model: "Model 3", chargeState: sampleChargeState)
+    }
+}

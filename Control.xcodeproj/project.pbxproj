@@ -36,6 +36,7 @@
 		B5FC2C5A24BA96F000AE44F6 /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5924BA96F000AE44F6 /* VehicleState.swift */; };
 		B5FC2C5C24BACC4B00AE44F6 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5B24BACC4B00AE44F6 /* PostResult.swift */; };
 		B5FC2C5E24BF7EE300AE44F6 /* SampleVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */; };
+		B5FC2C6024BF86FE00AE44F6 /* SampleChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5F24BF86FE00AE44F6 /* SampleChargeState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		B5FC2C5924BA96F000AE44F6 /* VehicleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleState.swift; sourceTree = "<group>"; };
 		B5FC2C5B24BACC4B00AE44F6 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
 		B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleVehicles.swift; sourceTree = "<group>"; };
+		B5FC2C5F24BF86FE00AE44F6 /* SampleChargeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleChargeState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				B523328424B2C86800C9E403 /* Preview Assets.xcassets */,
 				B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */,
+				B5FC2C5F24BF86FE00AE44F6 /* SampleChargeState.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				B52332B424B41EA100C9E403 /* AuthData.swift in Sources */,
 				B5650E4B24B7B7560060A7FC /* AuthModel.swift in Sources */,
 				B52332BA24B5488400C9E403 /* VehiclesData.swift in Sources */,
+				B5FC2C6024BF86FE00AE44F6 /* SampleChargeState.swift in Sources */,
 				B52332C524B6781900C9E403 /* State.swift in Sources */,
 				B523328024B2C86800C9E403 /* LoginView.swift in Sources */,
 				B5FC2C5624BA61D700AE44F6 /* ActionsView.swift in Sources */,
