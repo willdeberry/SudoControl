@@ -37,6 +37,7 @@
 		B5FC2C5C24BACC4B00AE44F6 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5B24BACC4B00AE44F6 /* PostResult.swift */; };
 		B5FC2C5E24BF7EE300AE44F6 /* SampleVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */; };
 		B5FC2C6024BF86FE00AE44F6 /* SampleChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5F24BF86FE00AE44F6 /* SampleChargeState.swift */; };
+		B5FC2C6224BF8C5400AE44F6 /* SampleVehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C6124BF8C5400AE44F6 /* SampleVehicleState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		B5FC2C5B24BACC4B00AE44F6 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
 		B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleVehicles.swift; sourceTree = "<group>"; };
 		B5FC2C5F24BF86FE00AE44F6 /* SampleChargeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleChargeState.swift; sourceTree = "<group>"; };
+		B5FC2C6124BF8C5400AE44F6 /* SampleVehicleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleVehicleState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				B523328424B2C86800C9E403 /* Preview Assets.xcassets */,
 				B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */,
 				B5FC2C5F24BF86FE00AE44F6 /* SampleChargeState.swift */,
+				B5FC2C6124BF8C5400AE44F6 /* SampleVehicleState.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				B52332BC24B54DF000C9E403 /* VehicleView.swift in Sources */,
 				B52332BF24B60A6900C9E403 /* Api.swift in Sources */,
 				B5650E4824B757110060A7FC /* Commands.swift in Sources */,
+				B5FC2C6224BF8C5400AE44F6 /* SampleVehicleState.swift in Sources */,
 				B5FC2C4A24B7F41D00AE44F6 /* View+Extensions.swift in Sources */,
 				B52332B724B4DB5C00C9E403 /* Extensions.swift in Sources */,
 			);

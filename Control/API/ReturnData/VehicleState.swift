@@ -105,7 +105,8 @@ struct SoftwareUpdate: Codable {
 // MARK: - SpeedLimitMode
 struct SpeedLimitMode: Codable {
     let active: Bool
-    let currentLimitMph, maxLimitMph, minLimitMph: Int
+    let currentLimitMph: Double
+    let maxLimitMph, minLimitMph: Int
     let pinCodeSet: Bool
 
     enum CodingKeys: String, CodingKey {

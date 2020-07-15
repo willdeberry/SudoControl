@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailsView: View {
     var vehicle: Vehicle
     var model: String
-    @State private var vehicleState: VehicleStateResponse? = nil
+    @State var vehicleState: VehicleStateResponse? = nil
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -50,8 +50,8 @@ struct DetailsView: View {
     }
 }
 
-//struct DetailsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailsView()
-//    }
-//}
+struct DetailsView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailsView(vehicle: vehicle1, model: "Model 3", vehicleState: sampleVehicleState)
+    }
+}
