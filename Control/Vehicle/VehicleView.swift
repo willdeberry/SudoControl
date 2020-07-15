@@ -25,7 +25,7 @@ struct VehicleView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 15) {
                 HStack {
                     DetailsView(vehicle: vehicle, model: model)
                         .padding([.leading, .bottom], 30)
