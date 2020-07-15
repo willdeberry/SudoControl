@@ -85,8 +85,8 @@ struct ActionsView: View {
     }
 }
 
-//struct ActionsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ActionsView()
-//    }
-//}
+struct ActionsView_Previews: PreviewProvider {
+    static var previews: some View {
+        ActionsView(vehicle: vehicle1, chargeState: .constant(sampleChargeState))
+    }
+}
