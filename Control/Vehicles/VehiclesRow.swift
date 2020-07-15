@@ -42,8 +42,12 @@ struct VehiclesRow: View {
     }
 }
 
-//struct VehiclesRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        VehiclesRow()
-//    }
-//}
+struct VehiclesRow_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            VehiclesRow(vehicle: vehicle1, model: .constant("Model 3"))
+            VehiclesRow(vehicle: vehicle2, model: .constant("Model S"))
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
+    }
+}
