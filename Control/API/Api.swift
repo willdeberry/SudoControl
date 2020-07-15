@@ -110,16 +110,16 @@ class Api {
         guard let httpResponse = response as? HTTPURLResponse else { return .failure(.httpResponse) }
         switch httpResponse.statusCode {
         case 408:
-            NSLog("Please wake car before sending commands")
+            NSLog("Please wake car before sending commands, \(httpResponse.statusCode)")
             return .failure(.wake)
         case 400...499:
-            NSLog("Network error while sending request")
+            NSLog("Network error while sending request, \(httpResponse.statusCode)")
             return .failure(.networkError)
         case 500...599:
-            NSLog("Server error while sending request")
+            NSLog("Server error while sending request, \(httpResponse.statusCode)")
             return .failure(.serverError)
         default:
-            NSLog("Successfully processed request for \(String(describing: httpResponse.url))")
+            NSLog("Successfully processed request for \(String(describing: httpResponse.url)), \(httpResponse.statusCode)")
             return .success(data)
         }
     }

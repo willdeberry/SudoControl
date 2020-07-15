@@ -33,12 +33,12 @@ struct VehicleView: View {
                         .padding([.leading], 15)
                         .shadow(radius: 10.0, x: 10, y: 10)
                 }
-
                 Divider()
 
-                ActionsView(chargeState: $chargeState)
+                ActionsView(vehicle: vehicle, chargeState: $chargeState)
                 Spacer()
             }
+            .navigationBarHidden(true)
         }
         .navigationTitle(model)
         .onAppear(perform: getChargeData)
