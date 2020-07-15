@@ -25,14 +25,14 @@ struct ChargeStateResponse: Codable {
     let chargeEnableRequest: Bool
     let chargeEnergyAdded: Double
     let chargeLimitSoc, chargeLimitSocMax, chargeLimitSocMin, chargeLimitSocStd: Int
-    let chargeMilesAddedIdeal, chargeMilesAddedRated: Int
+    let chargeMilesAddedIdeal, chargeMilesAddedRated: Double
     let chargePortColdWeatherMode, chargePortDoorOpen: Bool
     let chargePortLatch: String
-    let chargeRate: Int
+    let chargeRate: Double
     let chargeToMaxRange: Bool
-    let chargerActualCurrent: Int
-    let chargerPhases: JSONNull?
-    let chargerPilotCurrent, chargerPower, chargerVoltage: Int
+    let chargerPhases: Int?
+    let chargerActualCurrent, chargerPilotCurrent, chargerPower: Int
+    let chargerVoltage: Int
     let chargingState, connChargeCable: String
     let estBatteryRange: Double
     let fastChargerBrand: String
@@ -46,7 +46,8 @@ struct ChargeStateResponse: Codable {
     let notEnoughPowerToHeat: JSONNull?
     let scheduledChargingPending: Bool
     let scheduledChargingStartTime: JSONNull?
-    let timeToFullCharge, timestamp: Int
+    let timeToFullCharge: Double
+    let timestamp: Int
     let tripCharging: Bool
     let usableBatteryLevel: Int
     let userChargeEnableRequest: JSONNull?
