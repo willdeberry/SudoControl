@@ -40,8 +40,9 @@ struct BatteryProgress: View {
     }
 }
 
-//struct BatteryProgress_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BatteryProgress()
-//    }
-//}
+struct BatteryProgress_Previews: PreviewProvider {
+    static var previews: some View {
+        BatteryProgress(chargeState: .constant(sampleChargeState))
+            .previewLayout(.fixed(width: 125, height: 125))
+    }
+}
