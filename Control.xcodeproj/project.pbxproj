@@ -35,6 +35,7 @@
 		B5FC2C5824BA964000AE44F6 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5724BA964000AE44F6 /* DetailsView.swift */; };
 		B5FC2C5A24BA96F000AE44F6 /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5924BA96F000AE44F6 /* VehicleState.swift */; };
 		B5FC2C5C24BACC4B00AE44F6 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5B24BACC4B00AE44F6 /* PostResult.swift */; };
+		B5FC2C5E24BF7EE300AE44F6 /* SampleVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		B5FC2C5724BA964000AE44F6 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		B5FC2C5924BA96F000AE44F6 /* VehicleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleState.swift; sourceTree = "<group>"; };
 		B5FC2C5B24BACC4B00AE44F6 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
+		B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleVehicles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B523328424B2C86800C9E403 /* Preview Assets.xcassets */,
+				B5FC2C5D24BF7EE300AE44F6 /* SampleVehicles.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			files = (
 				B5FC2C5424BA392200AE44F6 /* BatteryProgress.swift in Sources */,
 				B5FC2C5824BA964000AE44F6 /* DetailsView.swift in Sources */,
+				B5FC2C5E24BF7EE300AE44F6 /* SampleVehicles.swift in Sources */,
 				B52332AA24B3F1F100C9E403 /* Login.swift in Sources */,
 				B52332B424B41EA100C9E403 /* AuthData.swift in Sources */,
 				B5650E4B24B7B7560060A7FC /* AuthModel.swift in Sources */,

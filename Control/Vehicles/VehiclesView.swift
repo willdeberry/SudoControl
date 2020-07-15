@@ -10,7 +10,7 @@ import SwiftUI
 
 struct VehiclesView: View {
     @Binding var showSelf: Bool
-    @State private var vehicles: [Vehicle] = [Vehicle]()
+    @State var vehicles: [Vehicle] = [Vehicle]()
     @State private var model: String = ""
 
     var body: some View {
@@ -51,8 +51,8 @@ struct VehiclesView: View {
     }
 }
 
-//struct Vehicles_Previews: PreviewProvider {
-//    static var previews: some View {
-//        VehiclesView()
-//    }
-//}
+struct Vehicles_Previews: PreviewProvider {
+    static var previews: some View {
+        VehiclesView(showSelf: .constant(true), vehicles: [vehicle1, vehicle2])
+    }
+}
