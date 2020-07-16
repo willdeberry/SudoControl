@@ -12,27 +12,32 @@ struct VehicleView: View {
     var vehicle: Vehicle
     var model: String
     @State private var chargeState: ChargeStateResponse? = nil
+    @State private var isLoading: Bool = true
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 15) {
-                HStack {
-                    DetailsView(vehicle: vehicle, model: model)
-                        .padding([.leading, .bottom], 30)
-                        .padding([.trailing], 15)
+            if isLoading {
+                ProgressView("Loading...")
+            } else {
+                VStack(spacing: 15) {
+                    HStack {
+                        DetailsView(vehicle: vehicle, model: model)
+                            .padding([.leading, .bottom], 30)
+                            .padding([.trailing], 15)
 
-                    BatteryProgress(chargeState: $chargeState)
-                        .frame(width: 125.0, height: 125.0)
-                        .padding([.trailing, .bottom], 30)
-                        .padding([.leading], 15)
-                        .shadow(radius: 10.0, x: 10, y: 10)
+                        BatteryProgress(chargeState: $chargeState)
+                            .frame(width: 125.0, height: 125.0)
+                            .padding([.trailing, .bottom], 30)
+                            .padding([.leading], 15)
+                            .shadow(radius: 10.0, x: 10, y: 10)
+                    }
+                    Divider()
+
+                    ActionsView(vehicle: vehicle, chargeState: $chargeState)
+                    Spacer()
                 }
-                Divider()
-
-                ActionsView(vehicle: vehicle, chargeState: $chargeState)
-                Spacer()
+                .navigationBarHidden(true)
             }
-            .navigationBarHidden(true)
         }
         .navigationTitle(model)
         .onAppear(perform: getChargeData)
@@ -42,6 +47,7 @@ struct VehicleView: View {
         controlModel.api.getChargeState(id: vehicle.idS) { chargeState in
             if let chargeState = chargeState {
                 self.chargeState = chargeState
+                self.isLoading = false
             }
         }
     }
@@ -49,6 +55,6 @@ struct VehicleView: View {
 
 struct VehiclesItem_Previews: PreviewProvider {
     static var previews: some View {
-        VehicleView(vehicle: vehicle1, model: "Model 3").environmentObject(ControlModel())
+        VehicleView(vehicle: vehicle1, model: "Model 3").environmentObject(ControlModel(nil))
     }
 }
