@@ -50,7 +50,9 @@ class Api {
                 case .wake:
                     if let id = id {
                         self.sendWake(id: id) { success in
-                            self.sendCommand(method: method, api: api, id: id, payload: payload, completion: completion)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                                self.sendCommand(method: method, api: api, id: id, payload: payload, completion: completion)
+                            }
                         }
                     }
                 default:
