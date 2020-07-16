@@ -8,22 +8,16 @@
 import SwiftUI
 
 struct ActionsView: View {
+    @EnvironmentObject var controlModel: ControlModel
     var vehicle: Vehicle
     @Binding var chargeState: ChargeStateResponse?
-    var api: Api
     @State private var chargePortOpen: Bool = false
-
-    init(vehicle: Vehicle, chargeState: Binding<ChargeStateResponse?>) {
-        self.vehicle = vehicle
-        self._chargeState = chargeState
-        self.api = Api(vehicle: vehicle)
-    }
 
     var body: some View {
         VStack(spacing: 20) {
             HStack(spacing: 50) {
                 Button(action: {
-                    api.toggleChargePort(open: !chargePortOpen) { result in
+                    controlModel.api.toggleChargePort(id: vehicle.idS, open: !chargePortOpen) { result in
                         if result {
                             chargePortOpen.toggle()
                         } else {
@@ -87,6 +81,6 @@ struct ActionsView: View {
 
 struct ActionsView_Previews: PreviewProvider {
     static var previews: some View {
-        ActionsView(vehicle: vehicle1, chargeState: .constant(sampleChargeState))
+        ActionsView(vehicle: vehicle1, chargeState: .constant(sampleChargeState)).environmentObject(ControlModel())
     }
 }

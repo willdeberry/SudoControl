@@ -11,7 +11,7 @@
 
 import Foundation
 
-// MARK: - LoginData
+// MARK: - AuthData
 struct AuthData: Codable {
     let accessToken, tokenType: String
     let expiresIn: Int

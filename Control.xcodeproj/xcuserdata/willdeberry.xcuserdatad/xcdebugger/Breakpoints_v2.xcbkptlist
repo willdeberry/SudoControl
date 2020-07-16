@@ -31,25 +31,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "getVehicles(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "70C23272-5EE9-43D7-BB80-056AC7B13D99"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Control/Vehicles/VehiclesView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "getVehicles()"
-            landmarkType = "7">
+            endingLineNumber = "34">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,8 +44,8 @@
             filePath = "Control/API/Api.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "processRequest(data:response:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,9 +60,9 @@
             filePath = "Control/API/Api.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "sendCommand(method:api:payload:completion:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "sendCommand(method:api:id:payload:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +76,9 @@
             filePath = "Control/API/Api.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "sendCommand(method:api:payload:completion:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "sendCommand(method:api:id:payload:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -142,8 +124,8 @@
             filePath = "Control/API/Api.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "handleRequest(request:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +140,8 @@
             filePath = "Control/API/Api.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "processRequest(data:response:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,9 +156,9 @@
             filePath = "Control/API/Api.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "init(vehicle:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "init(authModel:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

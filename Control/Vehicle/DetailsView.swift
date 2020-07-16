@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct DetailsView: View {
+    @EnvironmentObject var controlModel: ControlModel
     var vehicle: Vehicle
     var model: String
-    @State var vehicleState: VehicleStateResponse? = nil
+    @State private var vehicleState: VehicleStateResponse? = nil
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -41,8 +42,7 @@ struct DetailsView: View {
     }
 
     private func getVehicleState() {
-        let api = Api(vehicle: vehicle)
-        api.getVehicleState() { vehicleState in
+        controlModel.api.getVehicleState(id: vehicle.idS) { vehicleState in
             if let vehicleState = vehicleState {
                 self.vehicleState = vehicleState
             }
@@ -52,6 +52,6 @@ struct DetailsView: View {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(vehicle: vehicle1, model: "Model 3", vehicleState: sampleVehicleState)
+        DetailsView(vehicle: vehicle1, model: "Model 3").environmentObject(ControlModel())
     }
 }

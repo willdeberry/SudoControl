@@ -9,13 +9,13 @@ import SwiftUI
 
 @main
 struct ControlApp: App {
+    @ObservedObject var controlModel: ControlModel = ControlModel()
     @Environment(\.scenePhase) private var scenePhase
     @State private var showVehicleView: Bool = false
-    private var authModel = AuthModel()
     private var token: String = ""
 
     init() {
-        if let token = authModel.token {
+        if let token = controlModel.authModel.token {
             self.token = token.accessToken
         }
 
@@ -24,7 +24,7 @@ struct ControlApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView(showVehiclesView: $showVehicleView)
+            LoginView(showVehiclesView: $showVehicleView).environmentObject(controlModel)
         }
         .onChange(of: scenePhase) { phase in
             switch phase {

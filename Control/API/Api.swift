@@ -5,6 +5,7 @@
 //  Created by Will DeBerry on 7/8/20.
 //
 
+import Combine
 import Foundation
 
 class Api {
@@ -18,14 +19,11 @@ class Api {
         case request
     }
 
-    let authModel: AuthModel = AuthModel()
-    var vehicle: Vehicle?
+    var authModel: AuthModel
     var token: String
 
-    init(vehicle: Vehicle?) {
-        if let vehicle = vehicle {
-            self.vehicle = vehicle
-        }
+    init(authModel: AuthModel) {
+        self.authModel = authModel
 
         if let token = authModel.token {
             self.token = token.accessToken
@@ -36,25 +34,7 @@ class Api {
 
     // MARK: - Public Methods
 
-    func getVehicles(completion: @escaping ([Vehicle]?) -> Void) {
-        sendCommand(method: "GET", api: "vehicles", payload: nil) { result in
-            switch result {
-            case .success(let data):
-                guard let vehiclesData = try? newJSONDecoder().decode(VehiclesData.self, from: data) else {
-                    NSLog("Failed to decode vehiclesData")
-                    completion(nil)
-                    return
-                }
-
-                completion(vehiclesData.vehicles)
-            case .failure(let error):
-                NSLog("Failed to send command, Error: \(error.localizedDescription)")
-                completion(nil)
-            }
-        }
-    }
-
-    func sendCommand(method: String, api: String, payload: Array<[String: Any]>?, completion: @escaping (Result<Data, CommandError>) -> Void) {
+    func sendCommand(method: String, api: String ,id: String?, payload: Array<[String: Any]>?, completion: @escaping (Result<Data, CommandError>) -> Void) {
         guard let request = generateRequest(method: method, api: api, payload: payload) else {
             NSLog("Failed to generate request for \(api)")
             completion(.failure(.request))
@@ -68,10 +48,9 @@ class Api {
             case .failure(let error):
                 switch error {
                 case .wake:
-                    // TODO: Send wake command
-                    if self.vehicle != nil {
-                        self.sendWake() { success in
-                            self.sendCommand(method: method, api: api, payload: payload, completion: completion)
+                    if let id = id {
+                        self.sendWake(id: id) { success in
+                            self.sendCommand(method: method, api: api, id: id, payload: payload, completion: completion)
                         }
                     }
                 default:

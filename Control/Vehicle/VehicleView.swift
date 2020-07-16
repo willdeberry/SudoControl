@@ -8,20 +8,10 @@
 import SwiftUI
 
 struct VehicleView: View {
+    @EnvironmentObject var controlModel: ControlModel
     var vehicle: Vehicle
     var model: String
     @State private var chargeState: ChargeStateResponse? = nil
-    let api: Api
-
-    init(vehicle: Vehicle, model: String, chargeState: ChargeStateResponse?) {
-        self.vehicle = vehicle
-        self.model = model
-        self.api = Api(vehicle: vehicle)
-
-        if let chargeState = chargeState {
-            self.chargeState = chargeState
-        }
-    }
 
     var body: some View {
         NavigationView {
@@ -49,7 +39,7 @@ struct VehicleView: View {
     }
 
     private func getChargeData() {
-        api.getChargeState() { chargeState in
+        controlModel.api.getChargeState(id: vehicle.idS) { chargeState in
             if let chargeState = chargeState {
                 self.chargeState = chargeState
             }
@@ -59,6 +49,6 @@ struct VehicleView: View {
 
 struct VehiclesItem_Previews: PreviewProvider {
     static var previews: some View {
-        VehicleView(vehicle: vehicle1, model: "Model 3", chargeState: sampleChargeState)
+        VehicleView(vehicle: vehicle1, model: "Model 3").environmentObject(ControlModel())
     }
 }

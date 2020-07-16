@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var controlModel: ControlModel
     @Binding var showVehiclesView: Bool
     @State private var email: String = ""
     @State private var password: String = ""
-    let authModel = AuthModel()
-    let login = Login()
 
     var body: some View {
         ZStack {
@@ -52,11 +51,11 @@ struct LoginView: View {
                     }.padding([.leading, .trailing], 27.5)
 
                     Button(action: {
-                        authModel.email = email
-                        authModel.password = password
+                        controlModel.authModel.email = email
+                        controlModel.authModel.password = password
                         email = ""
                         password = ""
-                        login.generate() { success in
+                        controlModel.login.generate() { success in
                             if success {
                                 showVehiclesView = true
                             }
@@ -85,6 +84,6 @@ struct LoginView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(showVehiclesView: .constant(false))
+        LoginView(showVehiclesView: .constant(false)).environmentObject(ControlModel())
     }
 }

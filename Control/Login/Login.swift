@@ -8,7 +8,11 @@
 import Foundation
 
 class Login {
-    let authModel: AuthModel = AuthModel()
+    var authModel: AuthModel
+
+    init(authModel: AuthModel) {
+        self.authModel = authModel
+    }
 
     func generate(completion: @escaping (Bool) -> Void) {
         guard let url = URL(string: "\(Tesla.baseUrl)/oauth/token") else {

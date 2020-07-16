@@ -10,22 +10,22 @@ import SwiftUI
 
 struct VehiclesView: View {
     @Binding var showSelf: Bool
-    @State var vehicles: [Vehicle] = [Vehicle]()
-    @State private var model: String = ""
+    @EnvironmentObject var controlModel: ControlModel
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(vehicles, id: \.id) { vehicle in
-                    NavigationLink(destination: VehicleView(vehicle: vehicle, model: model, chargeState: nil)) {
-                        VehiclesRow(vehicle: vehicle, model: $model)
+                ForEach(controlModel.vehicles, id: \.id) { vehicle in
+                    let model = parseVehiceInfo(optionCodes: vehicle.optionCodes)
+                    NavigationLink(destination: VehicleView(vehicle: vehicle, model: model)) {
+                        VehiclesRow(vehicle: vehicle, model: model)
                     }
                 }
             }
             .navigationBarTitle(Text("Vehicles"))
             .navigationBarItems(leading:
                 Button(action: {
-                    Login().logout()
+                    controlModel.login.logout()
                     showSelf = false
                 }) {
                     Image(systemName: "person.crop.circle")
@@ -42,10 +42,11 @@ struct VehiclesView: View {
     }
 
     private func getVehicles() {
-        let api = Api(vehicle: nil)
-        api.getVehicles() { vehicles in
+        controlModel.api.getVehicles() { vehicles in
             if let vehicles = vehicles {
-                self.vehicles = vehicles
+                DispatchQueue.main.async {
+                    controlModel.vehicles = vehicles
+                }
             }
         }
     }
@@ -53,6 +54,6 @@ struct VehiclesView: View {
 
 struct Vehicles_Previews: PreviewProvider {
     static var previews: some View {
-        VehiclesView(showSelf: .constant(true), vehicles: [vehicle1, vehicle2])
+        VehiclesView(showSelf: .constant(true)).environmentObject(ControlModel())
     }
 }

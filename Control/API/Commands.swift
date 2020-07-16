@@ -8,9 +8,8 @@
 import Foundation
 
 extension Api {
-    func sendWake(completion: @escaping (Bool) -> Void) {
-        guard let id = vehicle?.idS else { return }
-        sendCommand(method: "POST", api: "/vehicles/\(id)/wake_up", payload: nil) { result in
+    func sendWake(id: String, completion: @escaping (Bool) -> Void) {
+        sendCommand(method: "POST", api: "/vehicles/\(id)/wake_up", id: id, payload: nil) { result in
             switch result {
             case .success:
                 completion(true)
@@ -21,15 +20,14 @@ extension Api {
         }
     }
 
-    func toggleChargePort(open: Bool, completion: @escaping (Bool) -> Void) {
-        guard let id = vehicle?.idS else { return }
+    func toggleChargePort(id: String, open: Bool, completion: @escaping (Bool) -> Void) {
         var api = "/vehicles/\(id)/command/charge_port_door_close"
 
         if open {
             api = "/vehicles/\(id)/command/charge_port_door_open"
         }
 
-        sendCommand(method: "POST", api: api, payload: nil) { result in
+        sendCommand(method: "POST", api: api, id: id, payload: nil) { result in
             switch result {
             case .success(let data):
                 guard let postResult = try? newJSONDecoder().decode(PostResult.self, from: data) else {

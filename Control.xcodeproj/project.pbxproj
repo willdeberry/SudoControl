@@ -26,6 +26,9 @@
 		B52332C524B6781900C9E403 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52332C424B6781900C9E403 /* State.swift */; };
 		B5650E4824B757110060A7FC /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5650E4724B757110060A7FC /* Commands.swift */; };
 		B5650E4B24B7B7560060A7FC /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5650E4A24B7B7560060A7FC /* AuthModel.swift */; };
+		B5BB93E424BFF6D600E22C71 /* Parsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB93E324BFF6D600E22C71 /* Parsers.swift */; };
+		B5D44E5F24BFD10800EB6E65 /* ControlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */; };
+		B5D44E6124BFD3D600EB6E65 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D44E6024BFD3D600EB6E65 /* Vehicles.swift */; };
 		B5FC2C4A24B7F41D00AE44F6 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C4924B7F41D00AE44F6 /* View+Extensions.swift */; };
 		B5FC2C4C24B8052800AE44F6 /* VehiclesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C4B24B8052800AE44F6 /* VehiclesRow.swift */; };
 		B5FC2C4E24B810B200AE44F6 /* VehicleConfigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C4D24B810B200AE44F6 /* VehicleConfigData.swift */; };
@@ -81,6 +84,9 @@
 		B52332C424B6781900C9E403 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		B5650E4724B757110060A7FC /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		B5650E4A24B7B7560060A7FC /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		B5BB93E324BFF6D600E22C71 /* Parsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsers.swift; sourceTree = "<group>"; };
+		B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlModel.swift; sourceTree = "<group>"; };
+		B5D44E6024BFD3D600EB6E65 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		B5FC2C4924B7F41D00AE44F6 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		B5FC2C4B24B8052800AE44F6 /* VehiclesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesRow.swift; sourceTree = "<group>"; };
 		B5FC2C4D24B810B200AE44F6 /* VehicleConfigData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleConfigData.swift; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 				B52332B824B5469100C9E403 /* Vehicles */,
 				B52332A824B3F19200C9E403 /* Login */,
 				B523327D24B2C86700C9E403 /* ControlApp.swift */,
+				B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */,
 				B523328124B2C86800C9E403 /* Assets.xcassets */,
 				B523328624B2C86800C9E403 /* Info.plist */,
 				B523328324B2C86800C9E403 /* Preview Content */,
@@ -203,6 +210,7 @@
 			children = (
 				B52332B624B4DB5C00C9E403 /* Extensions.swift */,
 				B52332AB24B3F41900C9E403 /* Constants.swift */,
+				B5BB93E324BFF6D600E22C71 /* Parsers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 				B52332BE24B60A6900C9E403 /* Api.swift */,
 				B52332C424B6781900C9E403 /* State.swift */,
 				B5650E4724B757110060A7FC /* Commands.swift */,
+				B5D44E6024BFD3D600EB6E65 /* Vehicles.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -420,6 +429,7 @@
 				B5FC2C5A24BA96F000AE44F6 /* VehicleState.swift in Sources */,
 				B5FC2C5C24BACC4B00AE44F6 /* PostResult.swift in Sources */,
 				B523327E24B2C86700C9E403 /* ControlApp.swift in Sources */,
+				B5BB93E424BFF6D600E22C71 /* Parsers.swift in Sources */,
 				B5FC2C4E24B810B200AE44F6 /* VehicleConfigData.swift in Sources */,
 				B52332B224B417AB00C9E403 /* VehiclesView.swift in Sources */,
 				B52332AC24B3F41900C9E403 /* Constants.swift in Sources */,
@@ -429,6 +439,8 @@
 				B5FC2C6224BF8C5400AE44F6 /* SampleVehicleState.swift in Sources */,
 				B5FC2C4A24B7F41D00AE44F6 /* View+Extensions.swift in Sources */,
 				B52332B724B4DB5C00C9E403 /* Extensions.swift in Sources */,
+				B5D44E5F24BFD10800EB6E65 /* ControlModel.swift in Sources */,
+				B5D44E6124BFD3D600EB6E65 /* Vehicles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

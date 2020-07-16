@@ -8,9 +8,8 @@
 import Foundation
 
 extension Api {
-    func getChargeState(completion: @escaping (ChargeStateResponse?) -> Void) {
-        guard let id = vehicle?.idS else { return }
-        sendCommand(method: "GET", api: "/vehicles/\(id)/data_request/charge_state", payload: nil) { result in
+    func getChargeState(id: String, completion: @escaping (ChargeStateResponse?) -> Void) {
+        sendCommand(method: "GET", api: "/vehicles/\(id)/data_request/charge_state", id: id, payload: nil) { result in
             switch result {
             case .success(let data):
                 guard let chargeState = try? newJSONDecoder().decode(ChargeState.self, from: data) else {
@@ -26,9 +25,8 @@ extension Api {
         }
     }
 
-    func getVehicleConfig(completion: @escaping (VehicleConfigResponse?) -> Void) {
-        guard let id = vehicle?.idS else { return }
-        sendCommand(method: "GET", api: "/vehicles/\(id)/data_request/vehicle_config", payload: nil) { result in
+    func getVehicleConfig(id: String, completion: @escaping (VehicleConfigResponse?) -> Void) {
+        sendCommand(method: "GET", api: "/vehicles/\(id)/data_request/vehicle_config", id: id, payload: nil) { result in
             switch result {
             case .success(let data):
                 guard let vehicleConfig = try? newJSONDecoder().decode(VehicleConfig.self, from: data) else {
@@ -44,9 +42,8 @@ extension Api {
         }
     }
 
-    func getVehicleState(completion: @escaping (VehicleStateResponse?) -> Void) {
-        guard let id = vehicle?.idS else { return }
-        sendCommand(method: "GET", api: "/vehicles/\(id)/data_request/vehicle_state", payload: nil) { result in
+    func getVehicleState(id: String, completion: @escaping (VehicleStateResponse?) -> Void) {
+        sendCommand(method: "GET", api: "/vehicles/\(id)/data_request/vehicle_state", id: id, payload: nil) { result in
             switch result {
             case .success(let data):
                 guard let vehicleState = try? newJSONDecoder().decode(VehicleState.self, from: data) else {
