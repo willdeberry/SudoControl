@@ -52,6 +52,6 @@ struct DetailsView: View {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(vehicle: vehicle1, model: "Model 3").environmentObject(ControlModel())
+        DetailsView(vehicle: vehicle1, model: "Model 3").environmentObject(ControlModel(nil))
     }
 }

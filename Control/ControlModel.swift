@@ -13,8 +13,12 @@ class ControlModel: ObservableObject {
     let api: Api
     var login: Login
 
-    init() {
+    init(_ vehicles: [Vehicle]?) {
         api = Api(authModel: authModel)
         login = Login(authModel: authModel)
+
+        if let vehicles = vehicles {
+            self.vehicles = vehicles
+        }
     }
 }

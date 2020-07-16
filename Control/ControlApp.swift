@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ControlApp: App {
-    @ObservedObject var controlModel: ControlModel = ControlModel()
+    @ObservedObject var controlModel: ControlModel = ControlModel(nil)
     @Environment(\.scenePhase) private var scenePhase
     @State private var showVehicleView: Bool = false
     private var token: String = ""

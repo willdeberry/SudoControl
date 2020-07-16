@@ -84,6 +84,6 @@ struct LoginView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(showVehiclesView: .constant(false)).environmentObject(ControlModel())
+        LoginView(showVehiclesView: .constant(false)).environmentObject(ControlModel(nil))
     }
 }

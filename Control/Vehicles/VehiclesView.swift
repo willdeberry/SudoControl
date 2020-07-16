@@ -54,6 +54,6 @@ struct VehiclesView: View {
 
 struct Vehicles_Previews: PreviewProvider {
     static var previews: some View {
-        VehiclesView(showSelf: .constant(true)).environmentObject(ControlModel())
+        VehiclesView(showSelf: .constant(true)).environmentObject(ControlModel([vehicle1, vehicle2]))
     }
 }
