@@ -8,17 +8,21 @@
 import Foundation
 
 class ControlModel: ObservableObject {
-    @Published var vehicles: [Vehicle] = [Vehicle]()
+    @Published var isLoading: Bool = false
+    @Published var vehicles: [Vehicle]
+    @Published var chargeState: ChargeStateResponse?
+    @Published var vehicleState: VehicleStateResponse?
     let authModel: AuthModel = AuthModel()
     let api: Api
     var login: Login
 
-    init(_ vehicles: [Vehicle]?) {
+    init(isLoading: Bool, vehicles: [Vehicle] = [Vehicle](), chargeState: ChargeStateResponse? = nil, vehicleState: VehicleStateResponse? = nil) {
         api = Api(authModel: authModel)
         login = Login(authModel: authModel)
 
-        if let vehicles = vehicles {
-            self.vehicles = vehicles
-        }
+        self.isLoading = isLoading
+        self.vehicles = vehicles
+        self.chargeState = chargeState
+        self.vehicleState = vehicleState
     }
 }

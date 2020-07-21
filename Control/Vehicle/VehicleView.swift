@@ -11,12 +11,10 @@ struct VehicleView: View {
     @EnvironmentObject var controlModel: ControlModel
     var vehicle: Vehicle
     var model: String
-    @State private var chargeState: ChargeStateResponse? = nil
-    @State private var isLoading: Bool = true
 
     var body: some View {
         NavigationView {
-            if isLoading {
+            if controlModel.isLoading {
                 ProgressView("Loading...")
             } else {
                 VStack(spacing: 15) {
@@ -25,7 +23,7 @@ struct VehicleView: View {
                             .padding([.leading, .bottom], 30)
                             .padding([.trailing], 15)
 
-                        BatteryProgress(chargeState: $chargeState)
+                        BatteryProgress(chargeState: $controlModel.chargeState)
                             .frame(width: 125.0, height: 125.0)
                             .padding([.trailing, .bottom], 30)
                             .padding([.leading], 15)
@@ -33,7 +31,7 @@ struct VehicleView: View {
                     }
                     Divider()
 
-                    ActionsView(vehicle: vehicle, chargeState: $chargeState)
+                    ActionsView(vehicle: vehicle)
                     Spacer()
                 }
                 .navigationBarHidden(true)
@@ -46,8 +44,10 @@ struct VehicleView: View {
     private func getChargeData() {
         controlModel.api.getChargeState(id: vehicle.idS) { chargeState in
             if let chargeState = chargeState {
-                self.chargeState = chargeState
-                self.isLoading = false
+                DispatchQueue.main.async {
+                    controlModel.chargeState = chargeState
+                    controlModel.isLoading = false
+                }
             }
         }
     }
@@ -55,6 +55,14 @@ struct VehicleView: View {
 
 struct VehiclesItem_Previews: PreviewProvider {
     static var previews: some View {
-        VehicleView(vehicle: vehicle1, model: "Model 3").environmentObject(ControlModel(nil))
+        VehicleView(vehicle: vehicle1, model: "Model 3")
+            .environmentObject(
+                ControlModel(
+                    isLoading: false,
+                    vehicles: [vehicle1, vehicle2],
+                    chargeState: sampleChargeState,
+                    vehicleState: sampleVehicleState
+                )
+            )
     }
 }

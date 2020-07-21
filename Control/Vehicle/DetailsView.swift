@@ -11,14 +11,13 @@ struct DetailsView: View {
     @EnvironmentObject var controlModel: ControlModel
     var vehicle: Vehicle
     var model: String
-    @State private var vehicleState: VehicleStateResponse? = nil
 
     var body: some View {
         VStack(alignment: .leading) {
             Group {
                 Text("Software Version:")
                     .bold()
-                vehicleState.map({Text("\($0.carVersion)")})
+                controlModel.vehicleState.map({Text("\($0.carVersion)")})
                     .font(.subheadline)
                     .padding([.bottom], 10)
             }
@@ -26,7 +25,7 @@ struct DetailsView: View {
             Group {
                 Text("Odometer:")
                     .bold()
-                vehicleState.map({Text("\(String(format: "%.2f", $0.odometer))")})
+                controlModel.vehicleState.map({Text("\(String(format: "%.2f", $0.odometer))")})
                     .font(.subheadline)
                     .padding([.bottom], 10)
             }
@@ -44,7 +43,9 @@ struct DetailsView: View {
     private func getVehicleState() {
         controlModel.api.getVehicleState(id: vehicle.idS) { vehicleState in
             if let vehicleState = vehicleState {
-                self.vehicleState = vehicleState
+                DispatchQueue.main.async {
+                    controlModel.vehicleState = vehicleState
+                }
             }
         }
     }
@@ -52,6 +53,14 @@ struct DetailsView: View {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(vehicle: vehicle1, model: "Model 3").environmentObject(ControlModel(nil))
+        DetailsView(vehicle: vehicle1, model: "Model 3")
+            .environmentObject(
+                ControlModel(
+                    isLoading: false,
+                    vehicles: [vehicle1, vehicle2],
+                    chargeState: sampleChargeState,
+                    vehicleState: sampleVehicleState
+                )
+            )
     }
 }

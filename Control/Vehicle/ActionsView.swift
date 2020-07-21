@@ -10,7 +10,6 @@ import SwiftUI
 struct ActionsView: View {
     @EnvironmentObject var controlModel: ControlModel
     var vehicle: Vehicle
-    @Binding var chargeState: ChargeStateResponse?
     @State private var chargePortOpen: Bool = false
 
     var body: some View {
@@ -21,7 +20,7 @@ struct ActionsView: View {
                         if result {
                             chargePortOpen.toggle()
                         } else {
-                            chargePortOpen = ((chargeState?.chargePortDoorOpen) != nil)
+                            chargePortOpen = ((controlModel.chargeState?.chargePortDoorOpen) != nil)
                         }
                     }
                 }){
@@ -81,6 +80,7 @@ struct ActionsView: View {
 
 struct ActionsView_Previews: PreviewProvider {
     static var previews: some View {
-        ActionsView(vehicle: vehicle1, chargeState: .constant(sampleChargeState)).environmentObject(ControlModel(nil))
+        ActionsView(vehicle: vehicle1)
+            .environmentObject(ControlModel(isLoading: false, chargeState: sampleChargeState))
     }
 }
