@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 func newJSONDecoder() -> JSONDecoder {
     let decoder = JSONDecoder()
@@ -48,31 +47,5 @@ class JSONNull: Codable, Hashable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         try container.encodeNil()
-    }
-}
-
-// MARK: - URLSession response handlers
-
-extension URLSession {
-    fileprivate func codableTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        return self.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else {
-                completionHandler(nil, response, error)
-                return
-            }
-            completionHandler(try? newJSONDecoder().decode(T.self, from: data), response, nil)
-        }
-    }
-
-    func authDataTask(with url: URL, completionHandler: @escaping (AuthData?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        return self.codableTask(with: url, completionHandler: completionHandler)
-    }
-}
-
-// MARK: - Color
-
-extension Color {
-    static var themeTextField: Color {
-        return Color(red: 220/255, green: 230/255, blue: 230/255, opacity: 1)
     }
 }
