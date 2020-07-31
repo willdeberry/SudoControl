@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ActionsView: View {
-    @EnvironmentObject var controlModel: ControlModel
     var vehicle: Vehicle
+    @Binding var chargeState: ChargeStateResponse?
+    @EnvironmentObject var controlModel: ControlModel
     @State private var chargePortOpen: Bool = false
 
     var body: some View {
@@ -20,7 +21,7 @@ struct ActionsView: View {
                         if result {
                             chargePortOpen.toggle()
                         } else {
-                            chargePortOpen = ((controlModel.chargeState?.chargePortDoorOpen) != nil)
+                            chargePortOpen = ((chargeState?.chargePortDoorOpen) != nil)
                         }
                     }
                 }){
@@ -78,9 +79,9 @@ struct ActionsView: View {
     }
 }
 
-struct ActionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActionsView(vehicle: vehicle1)
-            .environmentObject(ControlModel(isLoading: false, chargeState: sampleChargeState))
-    }
-}
+//struct ActionsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ActionsView(vehicle: vehicle1)
+//            .environmentObject(ControlModel(isLoading: false, chargeState: sampleChargeState))
+//    }
+//}

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B501D0A324D39249002A884C /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D0A224D39249002A884C /* Color+Extensions.swift */; };
 		B501D0A524D39273002A884C /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D0A424D39273002A884C /* URLSession+Extensions.swift */; };
+		B501D0A724D39D57002A884C /* VehicleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D0A624D39D57002A884C /* VehicleProvider.swift */; };
 		B523327E24B2C86700C9E403 /* ControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523327D24B2C86700C9E403 /* ControlApp.swift */; };
 		B523328024B2C86800C9E403 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523327F24B2C86800C9E403 /* LoginView.swift */; };
 		B523328224B2C86800C9E403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B523328124B2C86800C9E403 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		B501D0A224D39249002A884C /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		B501D0A424D39273002A884C /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
+		B501D0A624D39D57002A884C /* VehicleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleProvider.swift; sourceTree = "<group>"; };
 		B523327A24B2C86700C9E403 /* Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Control.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B523327D24B2C86700C9E403 /* ControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlApp.swift; sourceTree = "<group>"; };
 		B523327F24B2C86800C9E403 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				B5650E4424B69DB20060A7FC /* API */,
 				B52332B924B5488400C9E403 /* VehiclesData.swift */,
 				B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */,
+				B501D0A624D39D57002A884C /* VehicleProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				B5FC2C5824BA964000AE44F6 /* DetailsView.swift in Sources */,
 				B501D0A524D39273002A884C /* URLSession+Extensions.swift in Sources */,
 				B5FC2C5E24BF7EE300AE44F6 /* SampleVehicles.swift in Sources */,
+				B501D0A724D39D57002A884C /* VehicleProvider.swift in Sources */,
 				B52332AA24B3F1F100C9E403 /* Login.swift in Sources */,
 				B52332B424B41EA100C9E403 /* AuthData.swift in Sources */,
 				B5650E4B24B7B7560060A7FC /* AuthModel.swift in Sources */,
