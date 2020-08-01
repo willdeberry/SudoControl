@@ -29,6 +29,7 @@
 		B52332C524B6781900C9E403 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52332C424B6781900C9E403 /* State.swift */; };
 		B5650E4824B757110060A7FC /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5650E4724B757110060A7FC /* Commands.swift */; };
 		B5650E4B24B7B7560060A7FC /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5650E4A24B7B7560060A7FC /* AuthModel.swift */; };
+		B5AD143A24D4F7B800934491 /* ActionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD143924D4F7B800934491 /* ActionsButton.swift */; };
 		B5BB93E424BFF6D600E22C71 /* Parsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB93E324BFF6D600E22C71 /* Parsers.swift */; };
 		B5D44E5F24BFD10800EB6E65 /* ControlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */; };
 		B5D44E6124BFD3D600EB6E65 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D44E6024BFD3D600EB6E65 /* Vehicles.swift */; };
@@ -90,6 +91,7 @@
 		B52332C424B6781900C9E403 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		B5650E4724B757110060A7FC /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		B5650E4A24B7B7560060A7FC /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		B5AD143924D4F7B800934491 /* ActionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsButton.swift; sourceTree = "<group>"; };
 		B5BB93E324BFF6D600E22C71 /* Parsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsers.swift; sourceTree = "<group>"; };
 		B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlModel.swift; sourceTree = "<group>"; };
 		B5D44E6024BFD3D600EB6E65 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
@@ -274,9 +276,9 @@
 		B5650E4924B7ACB60060A7FC /* Vehicle */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD143824D4F79A00934491 /* Actions */,
 				B52332BB24B54DF000C9E403 /* VehicleView.swift */,
 				B5FC2C5324BA392200AE44F6 /* BatteryProgress.swift */,
-				B5FC2C5524BA61D700AE44F6 /* ActionsView.swift */,
 				B5FC2C5724BA964000AE44F6 /* DetailsView.swift */,
 			);
 			path = Vehicle;
@@ -289,6 +291,15 @@
 				B52332B324B41EA100C9E403 /* AuthData.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		B5AD143824D4F79A00934491 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				B5FC2C5524BA61D700AE44F6 /* ActionsView.swift */,
+				B5AD143924D4F7B800934491 /* ActionsButton.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		B5FC2C4824B7F31F00AE44F6 /* Extensions */ = {
@@ -465,6 +476,7 @@
 				B5650E4824B757110060A7FC /* Commands.swift in Sources */,
 				B5FC2C6224BF8C5400AE44F6 /* SampleVehicleState.swift in Sources */,
 				B5FC2C4A24B7F41D00AE44F6 /* View+Extensions.swift in Sources */,
+				B5AD143A24D4F7B800934491 /* ActionsButton.swift in Sources */,
 				B52332B724B4DB5C00C9E403 /* Decoders.swift in Sources */,
 				B501D0A324D39249002A884C /* Color+Extensions.swift in Sources */,
 				B5D44E5F24BFD10800EB6E65 /* ControlModel.swift in Sources */,

@@ -34,7 +34,7 @@ class Api {
 
     // MARK: - Public Methods
 
-    func sendCommand(method: String, api: String ,id: String?, payload: Array<[String: Any]>?, completion: @escaping (Result<Data, CommandError>) -> Void) {
+    func sendCommand(method: String, api: String ,id: String?, payload: [String: String]?, completion: @escaping (Result<Data, CommandError>) -> Void) {
         guard let request = generateRequest(method: method, api: api, payload: payload) else {
             NSLog("Failed to generate request for \(api)")
             completion(.failure(.request))
@@ -64,12 +64,22 @@ class Api {
 
     // MARK: - Private Methods
 
-    private func generateRequest(method: String, api: String, payload: Array<[String: Any]>?) -> URLRequest? {
+    private func generateRequest(method: String, api: String, payload: [String: String]?) -> URLRequest? {
         guard let url = URL(string: "\(Tesla.baseUrl)/api/1/\(api)") else { return nil }
         var request = URLRequest(url: url)
         request.httpMethod = method
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+
+        if payload != nil {
+            guard let encoded = try? JSONEncoder().encode(payload) else {
+                NSLog("Failed to encode payload")
+                return nil
+            }
+
+            print("Here")
+            request.httpBody = encoded
+        }
 
         return request
     }

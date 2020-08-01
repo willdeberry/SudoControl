@@ -39,7 +39,7 @@ struct VehicleView: View {
                     }
                     Divider()
 
-                    ActionsView(vehicle: vehicle, chargeState: $vehicleProvider.chargeState)
+                    ActionsView(vehicle: vehicle, state: $vehicleProvider.state, chargeState: $vehicleProvider.chargeState)
                     Spacer()
                 }
                 .navigationBarHidden(true)

@@ -46,4 +46,40 @@ extension Api {
             }
         }
     }
+
+    func toggleWindows(id: String, open: Bool, completion: @escaping (Bool) -> Void) {
+        var payload = ["command": "vent"]
+
+        if open {
+            payload = ["command": "close"]
+        }
+
+        sendCommand(method: "POST", api: "/vehicles/\(id)/command/window_control", id: id, payload: payload) { result in
+            switch result {
+            case .success:
+                completion(true)
+            case .failure(let error):
+                NSLog("Failed to send vent comment, Error \(error.localizedDescription)")
+                completion(false)
+            }
+        }
+    }
+
+    func toggleDoorLocks(id: String, open: Bool, completion: @escaping (Bool) -> Void) {
+        var api = "/vehicles/\(id)/command/door_lock"
+
+        if open {
+            api = "/vehicles/\(id)/command/door_unlock"
+        }
+
+        sendCommand(method: "POST", api: api, id: id, payload: nil) { result in
+            switch result {
+            case .success:
+                completion(true)
+            case .failure(let error):
+                NSLog("Failed to send door lock command, Error: \(error.localizedDescription)")
+                completion(false)
+            }
+        }
+    }
 }
