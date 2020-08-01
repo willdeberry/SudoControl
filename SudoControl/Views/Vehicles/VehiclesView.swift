@@ -10,12 +10,12 @@ import SwiftUI
 
 struct VehiclesView: View {
     @Binding var showSelf: Bool
-    @EnvironmentObject var controlModel: ControlModel
+    @EnvironmentObject var appModel: AppModel
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(controlModel.vehicles, id: \.id) { vehicle in
+                ForEach(appModel.vehicles, id: \.id) { vehicle in
                     let model = parseVehiceInfo(optionCodes: vehicle.optionCodes)
                     NavigationLink(destination: VehicleView(vehicle: vehicle, model: model)) {
                         VehiclesRow(vehicle: vehicle, model: model)
@@ -25,14 +25,14 @@ struct VehiclesView: View {
             .navigationBarTitle(Text("Vehicles"))
             .navigationBarItems(leading:
                 Button(action: {
-                    controlModel.login.logout()
+                    appModel.login.logout()
                     showSelf = false
                 }) {
                     Image(systemName: "person.crop.circle")
                 }
                 , trailing:
                 Button(action: {
-                    controlModel.refresh()
+                    appModel.refresh()
                 }) {
                     Image(systemName: "arrow.clockwise")
                 }
@@ -44,8 +44,6 @@ struct VehiclesView: View {
 struct Vehicles_Previews: PreviewProvider {
     static var previews: some View {
         VehiclesView(showSelf: .constant(true))
-            .environmentObject(
-                ControlModel()
-            )
+            .environmentObject(AppModel())
     }
 }

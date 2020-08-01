@@ -11,7 +11,7 @@ struct ActionsView: View {
     var vehicle: Vehicle
     @Binding var state: VehicleStateResponse?
     @Binding var chargeState: ChargeStateResponse?
-    @EnvironmentObject var controlModel: ControlModel
+    @EnvironmentObject var appModel: AppModel
     @State private var chargePortOpen: Bool = false
     @State private var windowsOpen: Bool = false
     @State private var doorsOpen: Bool = false
@@ -35,7 +35,7 @@ struct ActionsView: View {
     }
 
     private func toggleChargePort() {
-        controlModel.api.toggleChargePort(id: vehicle.idS, open: !chargePortOpen) { result in
+        appModel.api.toggleChargePort(id: vehicle.idS, open: !chargePortOpen) { result in
             if result {
                 chargePortOpen.toggle()
             } else {
@@ -45,7 +45,7 @@ struct ActionsView: View {
     }
 
     private func toggleWindows() {
-        controlModel.api.toggleWindows(id: vehicle.idS, open: !windowsOpen) { result in
+        appModel.api.toggleWindows(id: vehicle.idS, open: !windowsOpen) { result in
             if result {
                 windowsOpen.toggle()
             }
@@ -53,7 +53,7 @@ struct ActionsView: View {
     }
 
     private func toggleDoorLocks() {
-        controlModel.api.toggleDoorLocks(id: vehicle.idS, open: !doorsOpen) { result in
+        appModel.api.toggleDoorLocks(id: vehicle.idS, open: !doorsOpen) { result in
             if result {
                 doorsOpen.toggle()
             } else {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var controlModel: ControlModel
+    @EnvironmentObject var appModel: AppModel
     @Binding var showVehiclesView: Bool
     @State private var email: String = ""
     @State private var password: String = ""
@@ -51,11 +51,11 @@ struct LoginView: View {
                     }.padding([.leading, .trailing], 27.5)
 
                     Button(action: {
-                        controlModel.authModel.email = email
-                        controlModel.authModel.password = password
+                        appModel.authModel.email = email
+                        appModel.authModel.password = password
                         email = ""
                         password = ""
-                        controlModel.login.generate() { success in
+                        appModel.login.generate() { success in
                             if success {
                                 showVehiclesView = true
                             }
@@ -85,6 +85,6 @@ struct LoginView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(showVehiclesView: .constant(false))
-            .environmentObject(ControlModel())
+            .environmentObject(AppModel())
     }
 }

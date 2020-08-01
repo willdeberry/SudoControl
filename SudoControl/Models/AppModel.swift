@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ControlModel: ObservableObject {
+class AppModel: ObservableObject {
     @Published var vehicles: [Vehicle] = [Vehicle]()
     let authModel: AuthModel = AuthModel()
     let api: Api

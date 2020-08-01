@@ -27,12 +27,12 @@ struct VehiclesRow: View {
     }
 }
 
-struct VehiclesRow_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            VehiclesRow(vehicle: vehicle1, model: "Model S")
-            VehiclesRow(vehicle: vehicle2, model: "Model 3")
-        }
-        .previewLayout(.fixed(width: 300, height: 70))
-    }
-}
+//struct VehiclesRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            VehiclesRow(vehicle: vehicle1, model: "Model S")
+//            VehiclesRow(vehicle: vehicle2, model: "Model 3")
+//        }
+//        .previewLayout(.fixed(width: 300, height: 70))
+//    }
+//}

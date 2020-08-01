@@ -10,7 +10,7 @@
 		B501D0A324D39249002A884C /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D0A224D39249002A884C /* Color+Extensions.swift */; };
 		B501D0A524D39273002A884C /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D0A424D39273002A884C /* URLSession+Extensions.swift */; };
 		B501D0A724D39D57002A884C /* VehicleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D0A624D39D57002A884C /* VehicleProvider.swift */; };
-		B523327E24B2C86700C9E403 /* ControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523327D24B2C86700C9E403 /* ControlApp.swift */; };
+		B523327E24B2C86700C9E403 /* SudoControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523327D24B2C86700C9E403 /* SudoControlApp.swift */; };
 		B523328024B2C86800C9E403 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523327F24B2C86800C9E403 /* LoginView.swift */; };
 		B523328224B2C86800C9E403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B523328124B2C86800C9E403 /* Assets.xcassets */; };
 		B523328524B2C86800C9E403 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B523328424B2C86800C9E403 /* Preview Assets.xcassets */; };
@@ -31,7 +31,7 @@
 		B5650E4B24B7B7560060A7FC /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5650E4A24B7B7560060A7FC /* AuthModel.swift */; };
 		B5AD143A24D4F7B800934491 /* ActionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD143924D4F7B800934491 /* ActionsButton.swift */; };
 		B5BB93E424BFF6D600E22C71 /* Parsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB93E324BFF6D600E22C71 /* Parsers.swift */; };
-		B5D44E5F24BFD10800EB6E65 /* ControlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */; };
+		B5D44E5F24BFD10800EB6E65 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D44E5E24BFD10800EB6E65 /* AppModel.swift */; };
 		B5D44E6124BFD3D600EB6E65 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D44E6024BFD3D600EB6E65 /* Vehicles.swift */; };
 		B5FC2C4A24B7F41D00AE44F6 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C4924B7F41D00AE44F6 /* View+Extensions.swift */; };
 		B5FC2C4C24B8052800AE44F6 /* VehiclesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FC2C4B24B8052800AE44F6 /* VehiclesRow.swift */; };
@@ -68,16 +68,16 @@
 		B501D0A224D39249002A884C /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		B501D0A424D39273002A884C /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		B501D0A624D39D57002A884C /* VehicleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleProvider.swift; sourceTree = "<group>"; };
-		B523327A24B2C86700C9E403 /* Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Control.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B523327D24B2C86700C9E403 /* ControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlApp.swift; sourceTree = "<group>"; };
+		B523327A24B2C86700C9E403 /* SudoControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B523327D24B2C86700C9E403 /* SudoControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudoControlApp.swift; sourceTree = "<group>"; };
 		B523327F24B2C86800C9E403 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B523328124B2C86800C9E403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B523328424B2C86800C9E403 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B523328624B2C86800C9E403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B523328B24B2C86900C9E403 /* ControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B523328B24B2C86900C9E403 /* SudoControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudoControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B523328F24B2C86900C9E403 /* ControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlTests.swift; sourceTree = "<group>"; };
 		B523329124B2C86900C9E403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B523329624B2C86900C9E403 /* ControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B523329624B2C86900C9E403 /* SudoControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudoControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B523329A24B2C86900C9E403 /* ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlUITests.swift; sourceTree = "<group>"; };
 		B523329C24B2C86900C9E403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B52332A924B3F1F100C9E403 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		B5650E4A24B7B7560060A7FC /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		B5AD143924D4F7B800934491 /* ActionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsButton.swift; sourceTree = "<group>"; };
 		B5BB93E324BFF6D600E22C71 /* Parsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsers.swift; sourceTree = "<group>"; };
-		B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlModel.swift; sourceTree = "<group>"; };
+		B5D44E5E24BFD10800EB6E65 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		B5D44E6024BFD3D600EB6E65 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		B5FC2C4924B7F41D00AE44F6 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		B5FC2C4B24B8052800AE44F6 /* VehiclesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesRow.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				B5650E4C24B7B7D10060A7FC /* Auth */,
 				B5650E4424B69DB20060A7FC /* API */,
 				B52332B924B5488400C9E403 /* VehiclesData.swift */,
-				B5D44E5E24BFD10800EB6E65 /* ControlModel.swift */,
+				B5D44E5E24BFD10800EB6E65 /* AppModel.swift */,
 				B501D0A624D39D57002A884C /* VehicleProvider.swift */,
 			);
 			path = Models;
@@ -161,9 +161,9 @@
 		B523327124B2C86700C9E403 = {
 			isa = PBXGroup;
 			children = (
-				B523327C24B2C86700C9E403 /* Control */,
-				B523328E24B2C86900C9E403 /* ControlTests */,
-				B523329924B2C86900C9E403 /* ControlUITests */,
+				B523327C24B2C86700C9E403 /* SudoControl */,
+				B523328E24B2C86900C9E403 /* SudoControlTests */,
+				B523329924B2C86900C9E403 /* SudoControlUITests */,
 				B523327B24B2C86700C9E403 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,26 +171,26 @@
 		B523327B24B2C86700C9E403 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B523327A24B2C86700C9E403 /* Control.app */,
-				B523328B24B2C86900C9E403 /* ControlTests.xctest */,
-				B523329624B2C86900C9E403 /* ControlUITests.xctest */,
+				B523327A24B2C86700C9E403 /* SudoControl.app */,
+				B523328B24B2C86900C9E403 /* SudoControlTests.xctest */,
+				B523329624B2C86900C9E403 /* SudoControlUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B523327C24B2C86700C9E403 /* Control */ = {
+		B523327C24B2C86700C9E403 /* SudoControl */ = {
 			isa = PBXGroup;
 			children = (
 				B501D0A124D3919C002A884C /* Views */,
 				B501D0A024D39190002A884C /* Models */,
 				B52332BD24B60A5800C9E403 /* API */,
 				B52332B524B4DB4D00C9E403 /* Helpers */,
-				B523327D24B2C86700C9E403 /* ControlApp.swift */,
+				B523327D24B2C86700C9E403 /* SudoControlApp.swift */,
 				B523328124B2C86800C9E403 /* Assets.xcassets */,
 				B523328624B2C86800C9E403 /* Info.plist */,
 				B523328324B2C86800C9E403 /* Preview Content */,
 			);
-			path = Control;
+			path = SudoControl;
 			sourceTree = "<group>";
 		};
 		B523328324B2C86800C9E403 /* Preview Content */ = {
@@ -204,22 +204,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B523328E24B2C86900C9E403 /* ControlTests */ = {
+		B523328E24B2C86900C9E403 /* SudoControlTests */ = {
 			isa = PBXGroup;
 			children = (
 				B523328F24B2C86900C9E403 /* ControlTests.swift */,
 				B523329124B2C86900C9E403 /* Info.plist */,
 			);
-			path = ControlTests;
+			path = SudoControlTests;
 			sourceTree = "<group>";
 		};
-		B523329924B2C86900C9E403 /* ControlUITests */ = {
+		B523329924B2C86900C9E403 /* SudoControlUITests */ = {
 			isa = PBXGroup;
 			children = (
 				B523329A24B2C86900C9E403 /* ControlUITests.swift */,
 				B523329C24B2C86900C9E403 /* Info.plist */,
 			);
-			path = ControlUITests;
+			path = SudoControlUITests;
 			sourceTree = "<group>";
 		};
 		B52332A824B3F19200C9E403 /* Login */ = {
@@ -315,9 +315,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B523327924B2C86700C9E403 /* Control */ = {
+		B523327924B2C86700C9E403 /* SudoControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B523329F24B2C86900C9E403 /* Build configuration list for PBXNativeTarget "Control" */;
+			buildConfigurationList = B523329F24B2C86900C9E403 /* Build configuration list for PBXNativeTarget "SudoControl" */;
 			buildPhases = (
 				B523327624B2C86700C9E403 /* Sources */,
 				B523327724B2C86700C9E403 /* Frameworks */,
@@ -327,18 +327,18 @@
 			);
 			dependencies = (
 			);
-			name = Control;
+			name = SudoControl;
 			packageProductDependencies = (
 				B52332AE24B4008F00C9E403 /* KeychainSwift */,
 				B52332C124B6149900C9E403 /* SwiftUIPullToRefresh */,
 			);
 			productName = Control;
-			productReference = B523327A24B2C86700C9E403 /* Control.app */;
+			productReference = B523327A24B2C86700C9E403 /* SudoControl.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B523328A24B2C86900C9E403 /* ControlTests */ = {
+		B523328A24B2C86900C9E403 /* SudoControlTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B52332A224B2C86900C9E403 /* Build configuration list for PBXNativeTarget "ControlTests" */;
+			buildConfigurationList = B52332A224B2C86900C9E403 /* Build configuration list for PBXNativeTarget "SudoControlTests" */;
 			buildPhases = (
 				B523328724B2C86900C9E403 /* Sources */,
 				B523328824B2C86900C9E403 /* Frameworks */,
@@ -349,14 +349,14 @@
 			dependencies = (
 				B523328D24B2C86900C9E403 /* PBXTargetDependency */,
 			);
-			name = ControlTests;
+			name = SudoControlTests;
 			productName = ControlTests;
-			productReference = B523328B24B2C86900C9E403 /* ControlTests.xctest */;
+			productReference = B523328B24B2C86900C9E403 /* SudoControlTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B523329524B2C86900C9E403 /* ControlUITests */ = {
+		B523329524B2C86900C9E403 /* SudoControlUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B52332A524B2C86900C9E403 /* Build configuration list for PBXNativeTarget "ControlUITests" */;
+			buildConfigurationList = B52332A524B2C86900C9E403 /* Build configuration list for PBXNativeTarget "SudoControlUITests" */;
 			buildPhases = (
 				B523329224B2C86900C9E403 /* Sources */,
 				B523329324B2C86900C9E403 /* Frameworks */,
@@ -367,9 +367,9 @@
 			dependencies = (
 				B523329824B2C86900C9E403 /* PBXTargetDependency */,
 			);
-			name = ControlUITests;
+			name = SudoControlUITests;
 			productName = ControlUITests;
-			productReference = B523329624B2C86900C9E403 /* ControlUITests.xctest */;
+			productReference = B523329624B2C86900C9E403 /* SudoControlUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -394,7 +394,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B523327524B2C86700C9E403 /* Build configuration list for PBXProject "Control" */;
+			buildConfigurationList = B523327524B2C86700C9E403 /* Build configuration list for PBXProject "SudoControl" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -411,9 +411,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B523327924B2C86700C9E403 /* Control */,
-				B523328A24B2C86900C9E403 /* ControlTests */,
-				B523329524B2C86900C9E403 /* ControlUITests */,
+				B523327924B2C86700C9E403 /* SudoControl */,
+				B523328A24B2C86900C9E403 /* SudoControlTests */,
+				B523329524B2C86900C9E403 /* SudoControlUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -466,7 +466,7 @@
 				B5FC2C4C24B8052800AE44F6 /* VehiclesRow.swift in Sources */,
 				B5FC2C5A24BA96F000AE44F6 /* VehicleState.swift in Sources */,
 				B5FC2C5C24BACC4B00AE44F6 /* PostResult.swift in Sources */,
-				B523327E24B2C86700C9E403 /* ControlApp.swift in Sources */,
+				B523327E24B2C86700C9E403 /* SudoControlApp.swift in Sources */,
 				B5BB93E424BFF6D600E22C71 /* Parsers.swift in Sources */,
 				B5FC2C4E24B810B200AE44F6 /* VehicleConfigData.swift in Sources */,
 				B52332B224B417AB00C9E403 /* VehiclesView.swift in Sources */,
@@ -479,7 +479,7 @@
 				B5AD143A24D4F7B800934491 /* ActionsButton.swift in Sources */,
 				B52332B724B4DB5C00C9E403 /* Decoders.swift in Sources */,
 				B501D0A324D39249002A884C /* Color+Extensions.swift in Sources */,
-				B5D44E5F24BFD10800EB6E65 /* ControlModel.swift in Sources */,
+				B5D44E5F24BFD10800EB6E65 /* AppModel.swift in Sources */,
 				B5D44E6124BFD3D600EB6E65 /* Vehicles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,12 +505,12 @@
 /* Begin PBXTargetDependency section */
 		B523328D24B2C86900C9E403 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B523327924B2C86700C9E403 /* Control */;
+			target = B523327924B2C86700C9E403 /* SudoControl */;
 			targetProxy = B523328C24B2C86900C9E403 /* PBXContainerItemProxy */;
 		};
 		B523329824B2C86900C9E403 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B523327924B2C86700C9E403 /* Control */;
+			target = B523327924B2C86700C9E403 /* SudoControl */;
 			targetProxy = B523329724B2C86900C9E403 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -638,16 +638,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Control/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SudoControl/Preview Content\"";
 				DEVELOPMENT_TEAM = UVAVM9VF2P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Control/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SudoControl/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sudoservers.Control;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudoservers.SudoControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -660,16 +661,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Control/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SudoControl/Preview Content\"";
 				DEVELOPMENT_TEAM = UVAVM9VF2P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Control/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SudoControl/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sudoservers.Control;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudoservers.SudoControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -763,7 +765,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B523327524B2C86700C9E403 /* Build configuration list for PBXProject "Control" */ = {
+		B523327524B2C86700C9E403 /* Build configuration list for PBXProject "SudoControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B523329D24B2C86900C9E403 /* Debug */,
@@ -772,7 +774,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B523329F24B2C86900C9E403 /* Build configuration list for PBXNativeTarget "Control" */ = {
+		B523329F24B2C86900C9E403 /* Build configuration list for PBXNativeTarget "SudoControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B52332A024B2C86900C9E403 /* Debug */,
@@ -781,7 +783,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B52332A224B2C86900C9E403 /* Build configuration list for PBXNativeTarget "ControlTests" */ = {
+		B52332A224B2C86900C9E403 /* Build configuration list for PBXNativeTarget "SudoControlTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B52332A324B2C86900C9E403 /* Debug */,
@@ -790,7 +792,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B52332A524B2C86900C9E403 /* Build configuration list for PBXNativeTarget "ControlUITests" */ = {
+		B52332A524B2C86900C9E403 /* Build configuration list for PBXNativeTarget "SudoControlUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B52332A624B2C86900C9E403 /* Debug */,
