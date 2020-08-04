@@ -58,6 +58,7 @@ struct LoginView: View {
                         appModel.login.generate() { success in
                             if success {
                                 showVehiclesView = true
+                                appModel.refresh()
                             }
                         }
                     }) {

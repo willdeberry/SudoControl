@@ -35,6 +35,8 @@ class Api {
     // MARK: - Public Methods
 
     func sendCommand(method: String, api: String ,id: String?, payload: [String: String]?, completion: @escaping (Result<Data, CommandError>) -> Void) {
+        verifyToken()
+
         guard let request = generateRequest(method: method, api: api, payload: payload) else {
             NSLog("Failed to generate request for \(api)")
             completion(.failure(.request))
@@ -63,6 +65,12 @@ class Api {
     }
 
     // MARK: - Private Methods
+
+    private func verifyToken() {
+        if let token = authModel.token {
+            self.token = token.accessToken
+        }
+    }
 
     private func generateRequest(method: String, api: String, payload: [String: String]?) -> URLRequest? {
         guard let url = URL(string: "\(Tesla.baseUrl)/api/1/\(api)") else { return nil }

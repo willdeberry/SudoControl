@@ -25,6 +25,7 @@ class AppModel: ObservableObject {
     }
 
     private func getVehicles() {
+        NSLog("Getting vehicles")
         api.getVehicles() { vehicles in
             if let vehicles = vehicles {
                 DispatchQueue.main.async {
