@@ -26,9 +26,9 @@ struct ActionsView: View {
                 ActionsButton(action: toggleChargePort, image: "bolt.fill", title: "Charge")
                 ActionsButton(action: toggleWindows, image: "wake", title: "Vent")
                 ActionsButton(action: toggleDoorLocks, image: "lock.open.fill", title: "Unlock")
-                ActionsButton(action: toggleChargePort, image: "bolt.fill", title: "Frunk")
-                ActionsButton(action: toggleChargePort, image: "bolt.fill", title: "Trunk")
-                ActionsButton(action: toggleChargePort, image: "bolt.fill", title: "Honk")
+                ActionsButton(action: openFrontTrunk, image: "bolt.fill", title: "Frunk")
+                ActionsButton(action: openRearTrunk, image: "bolt.fill", title: "Trunk")
+                ActionsButton(action: honk, image: "bolt.fill", title: "Honk")
             }
             .padding()
         }
@@ -60,6 +60,18 @@ struct ActionsView: View {
                 doorsOpen = ((state?.locked) != nil)
             }
         }
+    }
+
+    private func openFrontTrunk() {
+        appModel.api.openFrontTrunk(id: vehicle.idS)
+    }
+
+    private func openRearTrunk() {
+        appModel.api.openRearTrunk(id: vehicle.idS)
+    }
+
+    private func honk() {
+        appModel.api.honk(id: vehicle.idS)
     }
 }
 

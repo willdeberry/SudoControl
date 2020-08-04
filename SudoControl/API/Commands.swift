@@ -82,4 +82,36 @@ extension Api {
             }
         }
     }
+
+    func openFrontTrunk(id: String) {
+        openTrunk(id: id, trunk: "front")
+    }
+
+    func openRearTrunk(id: String) {
+        openTrunk(id: id, trunk: "rear")
+    }
+
+    func honk(id: String) {
+        sendCommand(method: "POST", api: "/vehicles/\(id)/command/honk_horn", id: id, payload: nil) { result in
+            switch result {
+            case .success:
+                NSLog("Successfully honked horn")
+            case .failure(let error):
+                NSLog("Failed to honk the horn, ErrorL \(error.localizedDescription)")
+            }
+        }
+    }
+
+    // MARK: - Private Methods
+
+    private func openTrunk(id: String, trunk: String) {
+        sendCommand(method: "POST", api: "/vehicles/\(id)/command/actuate_trunk", id: id, payload: ["which_trunk": "front"]) { result in
+            switch result {
+            case .success:
+                NSLog("Successfully opened \(trunk) trunk")
+            case .failure(let error):
+                NSLog("Failed to open \(trunk) trunk, ErrorL \(error.localizedDescription)")
+            }
+        }
+    }
 }
