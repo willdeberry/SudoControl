@@ -641,7 +641,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SudoControl/Preview Content\"";
 				DEVELOPMENT_TEAM = UVAVM9VF2P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SudoControl/Info.plist";
+				INFOPLIST_FILE = SudoControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -664,7 +664,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SudoControl/Preview Content\"";
 				DEVELOPMENT_TEAM = UVAVM9VF2P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SudoControl/Info.plist";
+				INFOPLIST_FILE = SudoControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

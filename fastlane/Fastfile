@@ -1,0 +1,40 @@
+default_platform :ios
+
+platform :ios do
+
+  desc "Upload latest for testflight"
+  lane :upload do
+    increment_build_number(build_number: sh("date +'%Y.%m.%d.%H.%M'"))
+    build_app(
+        scheme: 'SudoControl',
+        output_directory: './',
+        export_xcargs: '-allowProvisioningUpdates',
+        export_method: 'app-store',
+        xcpretty_report_json: 'xcodebuild.json'
+    )
+    deliver(
+        price_tier: 0,
+        username: 'willdeberry@gmail.com',
+        force: true,
+        submit_for_review: false,
+        automatic_release: false,
+        submission_information: {
+            export_compliance_encryption_updated: false,
+            export_compliance_uses_encryption: false,
+            content_rights_contains_third_party_content: false,
+            add_id_info_uses_idfa: false
+        },
+        app_review_information: {
+            first_name: 'Will',
+            last_name: 'DeBerry',
+            phone_number: '813-330-0121',
+            email_address: 'willdeberry@gmail.com',
+            demo_user: '',
+            demo_password: '',
+            notes: ''
+        }
+    )
+  end
+
+end
+
