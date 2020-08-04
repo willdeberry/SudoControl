@@ -14,14 +14,17 @@ struct VehiclesRow: View {
     var body: some View {
         HStack {
             Image(systemName: "car")
-                .padding([.leading, .trailing], 5)
+                .padding([.leading, .trailing], 10)
+                .font(.title)
             Divider()
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 5) {
                 Text(model)
+                    .font(.title2)
                 Text(vehicle.vin)
-                    .font(.caption2)
+                    .font(.subheadline)
             }
-            .padding([.leading, .trailing], 5)
+            .padding([.leading, .trailing], 10)
+            .frame(height: 70)
             Spacer()
         }
     }
